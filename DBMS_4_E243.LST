@@ -1,0 +1,445 @@
+  SQL> 
+SQL> create table Emp(Emp_no numeric(4), Ename varchar(20), Gender char(1), Job varchar(12), Mgr numeric(4), Hiredate date, Salary numeric(8), Comm numeric(8), Dept_no numeric(2));
+
+Table created.
+
+SQL> 
+SQL> Insertion Department:-
+> 
+SP2-0734: unknown command beginning "Insertion ..." - rest of line ignored.
+SQL> insert into Department values(10,'ACCOUNTING','NEW YORK');
+
+1 row created.
+
+SQL> insert into Department values(20,'RESEARCH','DALLAS');
+
+1 row created.
+
+SQL> insert into Department values(30,'SALES','CHICAGO');
+
+1 row created.
+
+SQL> insert into Department values(40,'MARKETING','BOSTON');
+
+1 row created.
+
+SQL> 
+SQL> Insertion Employee:-
+> 
+SP2-0734: unknown command beginning "Insertion ..." - rest of line ignored.
+SQL> insert into Emp values(7369,'Smith','M','CLERK',7902,'17-DEC-80',8000,0,20);
+
+1 row created.
+
+SQL> insert into Emp values(7499,'Allen','F','SALESMAN',7698,'20-FEB-81',16000,3000,30);
+
+1 row created.
+
+SQL> insert into Emp values(7521,'Ward','M','SALESMAN',7698,'22-FEB-81',12500,5000,30);
+
+1 row created.
+
+SQL> insert into Emp values(7566,'Jones','F','MANAGER',7839,'02-APR-81',29750,0,20);
+
+1 row created.
+
+SQL> insert into Emp values(7654,'Martin','M','SALESMAN',7698,'28-SEP-81',12500,14000,30);
+
+1 row created.
+
+SQL> insert into Emp values(7698,'Blake','M','MANAGER',7839,'01-MAY-81',28500,0,30);
+
+1 row created.
+
+SQL> insert into Emp values(7782,'Clark','M','MANAGER',7839,'09-JUN-81',24500,0,10);
+
+1 row created.
+
+SQL> insert into Emp values(7788,'Scott','M','ANALYST',7566,'09-DEC-82',30000,0,20);
+
+1 row created.
+
+SQL> insert into Emp values(7839,'King','M','PRESIDENT',0,'17-NOV-81',50000,0,10);
+
+1 row created.
+
+SQL> insert into Emp values(7844,'Turner','M','SALESMAN',7698,'08-SEP-81',15000,0,30);
+
+1 row created.
+
+SQL> insert into Emp values(7876,'Adams','M','CLERK',7788,'12-JAN-83',11000,0,20);
+
+1 row created.
+
+SQL> insert into Emp values(7900,'James','M','CLERK',7698,'03-DEC-81',95000,0,30);
+
+1 row created.
+
+SQL> insert into Emp values(7902,'Ford','M','ANALYST',7566,'03-DEC-81',30000,0,20);
+
+1 row created.
+
+SQL> insert into Emp values(7934,'Miller','F','CLERK',7782,'23-JAN-82',13000,0,10);
+
+1 row created.
+
+SQL> desc emp;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMP_NO                                             NUMBER(4)
+ ENAME                                              VARCHAR2(20)
+ GENDER                                             CHAR(1)
+ JOB                                                VARCHAR2(12)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SALARY                                             NUMBER(8)
+ COMM                                               NUMBER(8)
+ DEPT_NO                                            NUMBER(2)
+
+SQL> select * from emp;
+
+    EMP_NO ENAME                G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7369 Smith                M CLERK              7902 17-DEC-80       8000  
+         0         20                                                           
+                                                                                
+      7499 Allen                F SALESMAN           7698 20-FEB-81      16000  
+      3000         30                                                           
+                                                                                
+      7521 Ward                 M SALESMAN           7698 22-FEB-81      12500  
+      5000         30                                                           
+                                                                                
+
+    EMP_NO ENAME                G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7566 Jones                F MANAGER            7839 02-APR-81      29750  
+         0         20                                                           
+                                                                                
+      7654 Martin               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30                                                           
+                                                                                
+      7698 Blake                M MANAGER            7839 01-MAY-81      28500  
+         0         30                                                           
+                                                                                
+
+    EMP_NO ENAME                G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7782 Clark                M MANAGER            7839 09-JUN-81      24500  
+         0         10                                                           
+                                                                                
+      7788 Scott                M ANALYST            7566 09-DEC-82      30000  
+         0         20                                                           
+                                                                                
+      7839 King                 M PRESIDENT             0 17-NOV-81      50000  
+         0         10                                                           
+                                                                                
+
+    EMP_NO ENAME                G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7844 Turner               M SALESMAN           7698 08-SEP-81      15000  
+         0         30                                                           
+                                                                                
+      7876 Adams                M CLERK              7788 12-JAN-83      11000  
+         0         20                                                           
+                                                                                
+      7900 James                M CLERK              7698 03-DEC-81      95000  
+         0         30                                                           
+                                                                                
+
+    EMP_NO ENAME                G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7902 Ford                 M ANALYST            7566 03-DEC-81      30000  
+         0         20                                                           
+                                                                                
+      7934 Miller               F CLERK              7782 23-JAN-82      13000  
+         0         10                                                           
+                                                                                
+
+14 rows selected.
+
+SQL> update emp set salary = salary+(salary/10);
+
+14 rows updated.
+
+SQL> select salary from emp;
+
+    SALARY                                                                      
+----------                                                                      
+      8800                                                                      
+     17600                                                                      
+     13750                                                                      
+     32725                                                                      
+     13750                                                                      
+     31350                                                                      
+     26950                                                                      
+     33000                                                                      
+     55000                                                                      
+     16500                                                                      
+     12100                                                                      
+
+    SALARY                                                                      
+----------                                                                      
+    104500                                                                      
+     33000                                                                      
+     14300                                                                      
+
+14 rows selected.
+
+SQL> select salary+comm as "total_salary" from emp;
+
+total_salary                                                                    
+------------                                                                    
+        8800                                                                    
+       20600                                                                    
+       18750                                                                    
+       32725                                                                    
+       27750                                                                    
+       31350                                                                    
+       26950                                                                    
+       33000                                                                    
+       55000                                                                    
+       16500                                                                    
+       12100                                                                    
+
+total_salary                                                                    
+------------                                                                    
+      104500                                                                    
+       33000                                                                    
+       14300                                                                    
+
+14 rows selected.
+
+SQL> select (1.1*salary+salary+0.3*salary+1500+1000) as "gross_salary" from emp;
+
+gross_salary                                                                    
+------------                                                                    
+       23620                                                                    
+       44740                                                                    
+       35500                                                                    
+       81040                                                                    
+       35500                                                                    
+       77740                                                                    
+       67180                                                                    
+       81700                                                                    
+      134500                                                                    
+       42100                                                                    
+       31540                                                                    
+
+gross_salary                                                                    
+------------                                                                    
+      253300                                                                    
+       81700                                                                    
+       36820                                                                    
+
+14 rows selected.
+
+SQL> desc emp;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMP_NO                                             NUMBER(4)
+ ENAME                                              VARCHAR2(20)
+ GENDER                                             CHAR(1)
+ JOB                                                VARCHAR2(12)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SALARY                                             NUMBER(8)
+ COMM                                               NUMBER(8)
+ DEPT_NO                                            NUMBER(2)
+
+ 
+SQL> select Ename from emp where Ename like '_____';
+
+ENAME                                                                           
+--------------------                                                            
+Smith                                                                           
+Allen                                                                           
+Jones                                                                           
+Blake                                                                           
+Clark                                                                           
+Scott                                                                           
+Adams                                                                           
+James                                                                           
+
+8 rows selected.
+
+ SQL> select Ename from emp where Ename like 'S%%%%';
+
+ENAME                                                                           
+--------------------                                                            
+Smith                                                                           
+Scott                                                                           
+ 
+SQL> select Ename from emp where Ename like '__r_';
+
+ENAME                                                                           
+--------------------                                                            
+Ward                                                                            
+Ford                                                                            
+
+ 
+SQL> select Ename from emp where Ename like 'S___h';
+
+ENAME                                                                           
+--------------------                                                            
+Smith                                                                           
+ 
+SQL> select Ename,salary from emp where salary like '___0';
+
+ENAME                    SALARY                                                 
+-------------------- ----------                                                 
+Smith                      8800                                                 
+
+SQL> select Ename from emp where Ename like '%ll%';
+
+ENAME                                                                           
+--------------------                                                            
+Allen                                                                           
+Miller                                                                          
+
+ 
+SQL> select Ename from emp where salary > (Select  salary from emp where Ename='Blake' );
+
+ENAME                                                                           
+--------------------                                                            
+Jones                                                                           
+Scott                                                                           
+King                                                                            
+James                                                                           
+Ford                                                                            
+
+ SQL> select Ename from emp where job= (Select  job from emp where eName='Allen' );
+
+ENAME                                                                           
+--------------------                                                            
+Allen                                                                           
+Ward                                                                            
+Martin                                                                          
+Turner                                                                          
+
+SQL> select Ename from emp where job= (Select  job from emp where eName='Miller'  )or salary>(select salary from emp where ename='Allen');
+
+ENAME                                                                           
+--------------------                                                            
+Smith                                                                           
+Jones                                                                           
+Blake                                                                           
+Clark                                                                           
+Scott                                                                           
+King                                                                            
+Adams                                                                           
+James                                                                           
+Ford                                                                            
+Miller                                                                          
+
+10 rows selected.
+ 
+SQL> select * from emp;
+
+    EMP_NO ENAME                G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7369 Smith                M CLERK              7902 17-DEC-80       8800  
+         0         20                                                           
+                                                                                
+      7499 Allen                F SALESMAN           7698 20-FEB-81      17600  
+      3000         30                                                           
+                                                                                
+      7521 Ward                 M SALESMAN           7698 22-FEB-81      13750  
+      5000         30                                                           
+                                                                                
+
+    EMP_NO ENAME                G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7566 Jones                F MANAGER            7839 02-APR-81      32725  
+         0         20                                                           
+                                                                                
+      7654 Martin               M SALESMAN           7698 28-SEP-81      13750  
+     14000         30                                                           
+                                                                                
+      7698 Blake                M MANAGER            7839 01-MAY-81      31350  
+         0         30                                                           
+                                                                                
+
+    EMP_NO ENAME                G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7782 Clark                M MANAGER            7839 09-JUN-81      26950  
+         0         10                                                           
+                                                                                
+      7788 Scott                M ANALYST            7566 09-DEC-82      33000  
+         0         20                                                           
+                                                                                
+      7839 King                 M PRESIDENT             0 17-NOV-81      55000  
+         0         10                                                           
+                                                                                
+
+    EMP_NO ENAME                G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7844 Turner               M SALESMAN           7698 08-SEP-81      16500  
+         0         30                                                           
+                                                                                
+      7876 Adams                M CLERK              7788 12-JAN-83      12100  
+         0         20                                                           
+                                                                                
+      7900 James                M CLERK              7698 03-DEC-81     104500  
+         0         30                                                           
+                                                                                
+
+    EMP_NO ENAME                G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7902 Ford                 M ANALYST            7566 03-DEC-81      33000  
+         0         20                                                           
+                                                                                
+      7934 Miller               F CLERK              7782 23-JAN-82      14300  
+         0         10                                                           
+                                                                                
+
+14 rows selected.
+ SQL> update emp set salary = (salary +salary/5);
+
+14 rows updated.
+
+ 
+SQL> select Ename from emp where salary> 3000;
+
+ENAME                                                                           
+--------------------                                                            
+Smith                                                                           
+Allen                                                                           
+Ward                                                                            
+Jones                                                                           
+Martin                                                                          
+Blake                                                                           
+Clark                                                                           
+Scott                                                                           
+King                                                                            
+Turner                                                                          
+Adams                                                                           
+
+ENAME                                                                           
+--------------------                                                            
+James                                                                           
+Ford                                                                            
+Miller                                                                          
+
+14 rows selected.
+
+  
