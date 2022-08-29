@@ -1,0 +1,1877 @@
+SQL> desc emp;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMP_NO                                             NUMBER
+ E_NAME                                             VARCHAR2(20)
+ GENDER                                             CHAR(1)
+ JOB                                                VARCHAR2(12)
+ MGR                                                NUMBER
+ HIREDATE                                           DATE
+ SALARY                                             NUMBER
+ COMM                                               NUMBER
+ DEPT_NO                                            NUMBER
+
+SQL> desc  department
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DEPT_NO                                            NUMBER
+ D_NAME                                             VARCHAR2(15)
+ LOCATION                                           VARCHAR2(12)
+
+SQL> select * from emp;
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7369 SMITH                M CLERK              7902 17-DEC-80       8000  
+                   20                                                           
+                                                                                
+      7499 ALLEN                F SALESMAN           7698 20-FEB-81      16000  
+      3000         30                                                           
+                                                                                
+      7521 WARD                 M SALESMAN           7698 22-FEB-81      12500  
+      5000         30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7566 JONES                F MANAGER            7839 02-APR-81      29750  
+                   20                                                           
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30                                                           
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7698 BLAKE                M MANAGER            7389 01-MAY-81      28500  
+                   30                                                           
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10                                                           
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7788 SCOTT                M ANALYST            7566 09-DEC-82      30000  
+                   20                                                           
+                                                                                
+      7839 KING                 M PRESIDENT               17-NOV-81      50000  
+                   10                                                           
+                                                                                
+      7844 TURNER               M SALESMAN           7698 08-SEP-81      15000  
+                   30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7876 ADAMS                M CLERK              7788 12-JAN-83      11000  
+                   20                                                           
+                                                                                
+      7900 JAMES                M CLERK              7698 03-DEC-81      95000  
+                   30                                                           
+                                                                                
+      7902 FORD                 M ANALYST            7566 03-DEC-81      30000  
+                   20                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7934 MILLER               F CLERK              7782 23-JAN-82      13000  
+                   10                                                           
+                                                                                
+
+16 rows selected.
+
+SQL> select * from department;
+
+   DEPT_NO D_NAME          LOCATION                                             
+---------- --------------- ------------                                         
+        10 ACCOUNTING      NEW YORK                                             
+        20 RESEARCH        DALLAS                                               
+        30 SALES           CHICAGO                                              
+        40 MARKETING       BOSTON                                               
+
+SQL> select * from account;
+
+no rows selected
+
+SQL> select * from account borrower;
+
+no rows selected
+
+SQL> select * from borrower;
+
+no rows selected
+
+SQL> select * from department;
+
+   DEPT_NO D_NAME          LOCATION                                             
+---------- --------------- ------------                                         
+        10 ACCOUNTING      NEW YORK                                             
+        20 RESEARCH        DALLAS                                               
+        30 SALES           CHICAGO                                              
+        40 MARKETING       BOSTON                                               
+
+SQL> select * from emp;
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7369 SMITH                M CLERK              7902 17-DEC-80       8000  
+                   20                                                           
+                                                                                
+      7499 ALLEN                F SALESMAN           7698 20-FEB-81      16000  
+      3000         30                                                           
+                                                                                
+      7521 WARD                 M SALESMAN           7698 22-FEB-81      12500  
+      5000         30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7566 JONES                F MANAGER            7839 02-APR-81      29750  
+                   20                                                           
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30                                                           
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7698 BLAKE                M MANAGER            7389 01-MAY-81      28500  
+                   30                                                           
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10                                                           
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7788 SCOTT                M ANALYST            7566 09-DEC-82      30000  
+                   20                                                           
+                                                                                
+      7839 KING                 M PRESIDENT               17-NOV-81      50000  
+                   10                                                           
+                                                                                
+      7844 TURNER               M SALESMAN           7698 08-SEP-81      15000  
+                   30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7876 ADAMS                M CLERK              7788 12-JAN-83      11000  
+                   20                                                           
+                                                                                
+      7900 JAMES                M CLERK              7698 03-DEC-81      95000  
+                   30                                                           
+                                                                                
+      7902 FORD                 M ANALYST            7566 03-DEC-81      30000  
+                   20                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7934 MILLER               F CLERK              7782 23-JAN-82      13000  
+                   10                                                           
+                                                                                
+
+16 rows selected.
+
+SQL> select jobs from emp   ;
+select jobs from emp   
+       *
+ERROR at line 1:
+ORA-00904: "JOBS": invalid identifier 
+
+
+SQL> select jobs from emp   ;
+select jobs from emp   
+       *
+ERROR at line 1:
+ORA-00904: "JOBS": invalid identifier 
+
+
+SQL> select job from emp   ;
+
+JOB                                                                             
+------------                                                                    
+CLERK                                                                           
+SALESMAN                                                                        
+SALESMAN                                                                        
+MANAGER                                                                         
+SALESMAN                                                                        
+SALESMAN                                                                        
+MANAGER                                                                         
+MANAGER                                                                         
+MANAGER                                                                         
+ANALYST                                                                         
+PRESIDENT                                                                       
+
+JOB                                                                             
+------------                                                                    
+SALESMAN                                                                        
+CLERK                                                                           
+CLERK                                                                           
+ANALYST                                                                         
+CLERK                                                                           
+
+16 rows selected.
+
+SQL> select * from emp;
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7369 SMITH                M CLERK              7902 17-DEC-80       8000  
+                   20                                                           
+                                                                                
+      7499 ALLEN                F SALESMAN           7698 20-FEB-81      16000  
+      3000         30                                                           
+                                                                                
+      7521 WARD                 M SALESMAN           7698 22-FEB-81      12500  
+      5000         30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7566 JONES                F MANAGER            7839 02-APR-81      29750  
+                   20                                                           
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30                                                           
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7698 BLAKE                M MANAGER            7389 01-MAY-81      28500  
+                   30                                                           
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10                                                           
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7788 SCOTT                M ANALYST            7566 09-DEC-82      30000  
+                   20                                                           
+                                                                                
+      7839 KING                 M PRESIDENT               17-NOV-81      50000  
+                   10                                                           
+                                                                                
+      7844 TURNER               M SALESMAN           7698 08-SEP-81      15000  
+                   30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7876 ADAMS                M CLERK              7788 12-JAN-83      11000  
+                   20                                                           
+                                                                                
+      7900 JAMES                M CLERK              7698 03-DEC-81      95000  
+                   30                                                           
+                                                                                
+      7902 FORD                 M ANALYST            7566 03-DEC-81      30000  
+                   20                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7934 MILLER               F CLERK              7782 23-JAN-82      13000  
+                   10                                                           
+                                                                                
+
+16 rows selected.
+
+SQL> select * from emp order by salary Sort Order
+  2  ;
+select * from emp order by salary Sort Order
+                                  *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select * from emp order by salary sort Order;
+select * from emp order by salary sort Order
+                                  *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select salary from emp order by salary ASC;
+
+    SALARY                                                                      
+----------                                                                      
+      8000                                                                      
+     11000                                                                      
+     12500                                                                      
+     12500                                                                      
+     12500                                                                      
+     13000                                                                      
+     15000                                                                      
+     16000                                                                      
+     24500                                                                      
+     24500                                                                      
+     28500                                                                      
+
+    SALARY                                                                      
+----------                                                                      
+     29750                                                                      
+     30000                                                                      
+     30000                                                                      
+     50000                                                                      
+     95000                                                                      
+
+16 rows selected.
+
+SQL> select (dept_no and Jobs) from emp order by dept_no ASC and Jobs DESC  ;
+select (dept_no and Jobs) from emp order by dept_no ASC and Jobs DESC  
+                *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select dept_no and Jobs from emp order by dept_no ASC and Jobs DESC  ;
+select dept_no and Jobs from emp order by dept_no ASC and Jobs DESC  
+               *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select (dept_no and Jobs) from emp order by dept_no ASC and Jobs DESC  ;
+select (dept_no and Jobs) from emp order by dept_no ASC and Jobs DESC  
+                *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select (dept_no and Jobs)) from emp order by dept_no ASC and Jobs DESC  ;
+select (dept_no and Jobs)) from emp order by dept_no ASC and Jobs DESC  
+                *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select * from emp;
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7369 SMITH                M CLERK              7902 17-DEC-80       8000  
+                   20                                                           
+                                                                                
+      7499 ALLEN                F SALESMAN           7698 20-FEB-81      16000  
+      3000         30                                                           
+                                                                                
+      7521 WARD                 M SALESMAN           7698 22-FEB-81      12500  
+      5000         30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7566 JONES                F MANAGER            7839 02-APR-81      29750  
+                   20                                                           
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30                                                           
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7698 BLAKE                M MANAGER            7389 01-MAY-81      28500  
+                   30                                                           
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10                                                           
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7788 SCOTT                M ANALYST            7566 09-DEC-82      30000  
+                   20                                                           
+                                                                                
+      7839 KING                 M PRESIDENT               17-NOV-81      50000  
+                   10                                                           
+                                                                                
+      7844 TURNER               M SALESMAN           7698 08-SEP-81      15000  
+                   30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7876 ADAMS                M CLERK              7788 12-JAN-83      11000  
+                   20                                                           
+                                                                                
+      7900 JAMES                M CLERK              7698 03-DEC-81      95000  
+                   30                                                           
+                                                                                
+      7902 FORD                 M ANALYST            7566 03-DEC-81      30000  
+                   20                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7934 MILLER               F CLERK              7782 23-JAN-82      13000  
+                   10                                                           
+                                                                                
+
+16 rows selected.
+
+SQL> select Job from emp order by job desc  ;
+
+JOB                                                                             
+------------                                                                    
+SALESMAN                                                                        
+SALESMAN                                                                        
+SALESMAN                                                                        
+SALESMAN                                                                        
+SALESMAN                                                                        
+PRESIDENT                                                                       
+MANAGER                                                                         
+MANAGER                                                                         
+MANAGER                                                                         
+MANAGER                                                                         
+CLERK                                                                           
+
+JOB                                                                             
+------------                                                                    
+CLERK                                                                           
+CLERK                                                                           
+CLERK                                                                           
+ANALYST                                                                         
+ANALYST                                                                         
+
+16 rows selected.
+
+SQL> select MGR from emp;
+
+       MGR                                                                      
+----------                                                                      
+      7902                                                                      
+      7698                                                                      
+      7698                                                                      
+      7839                                                                      
+      7698                                                                      
+      7698                                                                      
+      7389                                                                      
+      7839                                                                      
+      7839                                                                      
+      7566                                                                      
+                                                                                
+
+       MGR                                                                      
+----------                                                                      
+      7698                                                                      
+      7788                                                                      
+      7698                                                                      
+      7566                                                                      
+      7782                                                                      
+
+16 rows selected.
+
+SQL> select distinct job from emp;
+
+JOB                                                                             
+------------                                                                    
+CLERK                                                                           
+SALESMAN                                                                        
+PRESIDENT                                                                       
+MANAGER                                                                         
+ANALYST                                                                         
+
+SQL> select all job from emp;
+
+JOB                                                                             
+------------                                                                    
+CLERK                                                                           
+SALESMAN                                                                        
+SALESMAN                                                                        
+MANAGER                                                                         
+SALESMAN                                                                        
+SALESMAN                                                                        
+MANAGER                                                                         
+MANAGER                                                                         
+MANAGER                                                                         
+ANALYST                                                                         
+PRESIDENT                                                                       
+
+JOB                                                                             
+------------                                                                    
+SALESMAN                                                                        
+CLERK                                                                           
+CLERK                                                                           
+ANALYST                                                                         
+CLERK                                                                           
+
+16 rows selected.
+
+SQL> select emp_name, salary/12 from emp;
+select emp_name, salary/12 from emp
+       *
+ERROR at line 1:
+ORA-00904: "EMP_NAME": invalid identifier 
+
+
+SQL> select EMP_NAME, salary/12 from emp;
+select EMP_NAME, salary/12 from emp
+       *
+ERROR at line 1:
+ORA-00904: "EMP_NAME": invalid identifier 
+
+
+SQL> select E_NAME, salary/12 from emp;
+
+E_NAME                SALARY/12                                                 
+-------------------- ----------                                                 
+SMITH                666.666667                                                 
+ALLEN                1333.33333                                                 
+WARD                 1041.66667                                                 
+JONES                2479.16667                                                 
+MARTIN               1041.66667                                                 
+MARTIN               1041.66667                                                 
+BLAKE                      2375                                                 
+CLARK                2041.66667                                                 
+CLARK                2041.66667                                                 
+SCOTT                      2500                                                 
+KING                 4166.66667                                                 
+
+E_NAME                SALARY/12                                                 
+-------------------- ----------                                                 
+TURNER                     1250                                                 
+ADAMS                916.666667                                                 
+JAMES                7916.66667                                                 
+FORD                       2500                                                 
+MILLER               1083.33333                                                 
+
+16 rows selected.
+
+SQL> select EMP_NAME, salary/12+30000 from emp;
+select EMP_NAME, salary/12+30000 from emp
+       *
+ERROR at line 1:
+ORA-00904: "EMP_NAME": invalid identifier 
+
+
+SQL> select E_NAME, salary/12+30000 from emp;
+
+E_NAME               SALARY/12+30000                                            
+-------------------- ---------------                                            
+SMITH                     30666.6667                                            
+ALLEN                     31333.3333                                            
+WARD                      31041.6667                                            
+JONES                     32479.1667                                            
+MARTIN                    31041.6667                                            
+MARTIN                    31041.6667                                            
+BLAKE                          32375                                            
+CLARK                     32041.6667                                            
+CLARK                     32041.6667                                            
+SCOTT                          32500                                            
+KING                      34166.6667                                            
+
+E_NAME               SALARY/12+30000                                            
+-------------------- ---------------                                            
+TURNER                         31250                                            
+ADAMS                     30916.6667                                            
+JAMES                     37916.6667                                            
+FORD                           32500                                            
+MILLER                    31083.3333                                            
+
+16 rows selected.
+
+SQL> select EMP_NAME from emp dept_no =20 and salary =8000;
+select EMP_NAME from emp dept_no =20 and salary =8000
+                                 *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select EMP_NAME from emp dept_no=20 and salary =8000;
+select EMP_NAME from emp dept_no=20 and salary =8000
+                                *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select EMP_NAME from emp (dept_no=20 and salary =8000);
+select EMP_NAME from emp (dept_no=20 and salary =8000)
+                         *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select EMP_NAME from emp where  (dept_no=20 and salary =8000);
+select EMP_NAME from emp where  (dept_no=20 and salary =8000)
+       *
+ERROR at line 1:
+ORA-00904: "EMP_NAME": invalid identifier 
+
+
+SQL> select E_NAME from emp where  (dept_no=20 and salary =8000);
+
+E_NAME                                                                          
+--------------------                                                            
+SMITH                                                                           
+
+SQL> select E_NAME from emp where  (dept_no=20 or salary =8000);
+
+E_NAME                                                                          
+--------------------                                                            
+SMITH                                                                           
+JONES                                                                           
+SCOTT                                                                           
+ADAMS                                                                           
+FORD                                                                            
+
+SQL> select E_NAME from emp where  (dept_no=20 not  salary =8000);
+select E_NAME from emp where  (dept_no=20 not  salary =8000)
+                                      *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select count(e_name from emp);
+select count(e_name from emp)
+                    *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select count(e_name )from emp;
+
+COUNT(E_NAME)                                                                   
+-------------                                                                   
+           16                                                                   
+
+SQL> select count(e_name from department);
+select count(e_name from department)
+                    *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select count(e_name) from department);
+select count(e_name) from department)
+                                    *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select count(e_name) from department;
+select count(e_name) from department
+             *
+ERROR at line 1:
+ORA-00904: "E_NAME": invalid identifier 
+
+
+SQL> desc * department;
+SP2-0565: Illegal identifier.
+SQL> desc department;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DEPT_NO                                            NUMBER
+ D_NAME                                             VARCHAR2(15)
+ LOCATION                                           VARCHAR2(12)
+
+SQL> select count(D_name) from department;
+
+COUNT(D_NAME)                                                                   
+-------------                                                                   
+            4                                                                   
+
+SQL> select * from emp,department;
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7369 SMITH                M CLERK              7902 17-DEC-80       8000  
+                   20         10 ACCOUNTING      NEW YORK                       
+                                                                                
+      7499 ALLEN                F SALESMAN           7698 20-FEB-81      16000  
+      3000         30         10 ACCOUNTING      NEW YORK                       
+                                                                                
+      7521 WARD                 M SALESMAN           7698 22-FEB-81      12500  
+      5000         30         10 ACCOUNTING      NEW YORK                       
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7566 JONES                F MANAGER            7839 02-APR-81      29750  
+                   20         10 ACCOUNTING      NEW YORK                       
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30         10 ACCOUNTING      NEW YORK                       
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30         10 ACCOUNTING      NEW YORK                       
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7698 BLAKE                M MANAGER            7389 01-MAY-81      28500  
+                   30         10 ACCOUNTING      NEW YORK                       
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10         10 ACCOUNTING      NEW YORK                       
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10         10 ACCOUNTING      NEW YORK                       
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7788 SCOTT                M ANALYST            7566 09-DEC-82      30000  
+                   20         10 ACCOUNTING      NEW YORK                       
+                                                                                
+      7839 KING                 M PRESIDENT               17-NOV-81      50000  
+                   10         10 ACCOUNTING      NEW YORK                       
+                                                                                
+      7844 TURNER               M SALESMAN           7698 08-SEP-81      15000  
+                   30         10 ACCOUNTING      NEW YORK                       
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7876 ADAMS                M CLERK              7788 12-JAN-83      11000  
+                   20         10 ACCOUNTING      NEW YORK                       
+                                                                                
+      7900 JAMES                M CLERK              7698 03-DEC-81      95000  
+                   30         10 ACCOUNTING      NEW YORK                       
+                                                                                
+      7902 FORD                 M ANALYST            7566 03-DEC-81      30000  
+                   20         10 ACCOUNTING      NEW YORK                       
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7934 MILLER               F CLERK              7782 23-JAN-82      13000  
+                   10         10 ACCOUNTING      NEW YORK                       
+                                                                                
+      7369 SMITH                M CLERK              7902 17-DEC-80       8000  
+                   20         20 RESEARCH        DALLAS                         
+                                                                                
+      7499 ALLEN                F SALESMAN           7698 20-FEB-81      16000  
+      3000         30         20 RESEARCH        DALLAS                         
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7521 WARD                 M SALESMAN           7698 22-FEB-81      12500  
+      5000         30         20 RESEARCH        DALLAS                         
+                                                                                
+      7566 JONES                F MANAGER            7839 02-APR-81      29750  
+                   20         20 RESEARCH        DALLAS                         
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30         20 RESEARCH        DALLAS                         
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30         20 RESEARCH        DALLAS                         
+                                                                                
+      7698 BLAKE                M MANAGER            7389 01-MAY-81      28500  
+                   30         20 RESEARCH        DALLAS                         
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10         20 RESEARCH        DALLAS                         
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10         20 RESEARCH        DALLAS                         
+                                                                                
+      7788 SCOTT                M ANALYST            7566 09-DEC-82      30000  
+                   20         20 RESEARCH        DALLAS                         
+                                                                                
+      7839 KING                 M PRESIDENT               17-NOV-81      50000  
+                   10         20 RESEARCH        DALLAS                         
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7844 TURNER               M SALESMAN           7698 08-SEP-81      15000  
+                   30         20 RESEARCH        DALLAS                         
+                                                                                
+      7876 ADAMS                M CLERK              7788 12-JAN-83      11000  
+                   20         20 RESEARCH        DALLAS                         
+                                                                                
+      7900 JAMES                M CLERK              7698 03-DEC-81      95000  
+                   30         20 RESEARCH        DALLAS                         
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7902 FORD                 M ANALYST            7566 03-DEC-81      30000  
+                   20         20 RESEARCH        DALLAS                         
+                                                                                
+      7934 MILLER               F CLERK              7782 23-JAN-82      13000  
+                   10         20 RESEARCH        DALLAS                         
+                                                                                
+      7369 SMITH                M CLERK              7902 17-DEC-80       8000  
+                   20         30 SALES           CHICAGO                        
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7499 ALLEN                F SALESMAN           7698 20-FEB-81      16000  
+      3000         30         30 SALES           CHICAGO                        
+                                                                                
+      7521 WARD                 M SALESMAN           7698 22-FEB-81      12500  
+      5000         30         30 SALES           CHICAGO                        
+                                                                                
+      7566 JONES                F MANAGER            7839 02-APR-81      29750  
+                   20         30 SALES           CHICAGO                        
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30         30 SALES           CHICAGO                        
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30         30 SALES           CHICAGO                        
+                                                                                
+      7698 BLAKE                M MANAGER            7389 01-MAY-81      28500  
+                   30         30 SALES           CHICAGO                        
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10         30 SALES           CHICAGO                        
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10         30 SALES           CHICAGO                        
+                                                                                
+      7788 SCOTT                M ANALYST            7566 09-DEC-82      30000  
+                   20         30 SALES           CHICAGO                        
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7839 KING                 M PRESIDENT               17-NOV-81      50000  
+                   10         30 SALES           CHICAGO                        
+                                                                                
+      7844 TURNER               M SALESMAN           7698 08-SEP-81      15000  
+                   30         30 SALES           CHICAGO                        
+                                                                                
+      7876 ADAMS                M CLERK              7788 12-JAN-83      11000  
+                   20         30 SALES           CHICAGO                        
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7900 JAMES                M CLERK              7698 03-DEC-81      95000  
+                   30         30 SALES           CHICAGO                        
+                                                                                
+      7902 FORD                 M ANALYST            7566 03-DEC-81      30000  
+                   20         30 SALES           CHICAGO                        
+                                                                                
+      7934 MILLER               F CLERK              7782 23-JAN-82      13000  
+                   10         30 SALES           CHICAGO                        
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7369 SMITH                M CLERK              7902 17-DEC-80       8000  
+                   20         40 MARKETING       BOSTON                         
+                                                                                
+      7499 ALLEN                F SALESMAN           7698 20-FEB-81      16000  
+      3000         30         40 MARKETING       BOSTON                         
+                                                                                
+      7521 WARD                 M SALESMAN           7698 22-FEB-81      12500  
+      5000         30         40 MARKETING       BOSTON                         
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7566 JONES                F MANAGER            7839 02-APR-81      29750  
+                   20         40 MARKETING       BOSTON                         
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30         40 MARKETING       BOSTON                         
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30         40 MARKETING       BOSTON                         
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7698 BLAKE                M MANAGER            7389 01-MAY-81      28500  
+                   30         40 MARKETING       BOSTON                         
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10         40 MARKETING       BOSTON                         
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10         40 MARKETING       BOSTON                         
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7788 SCOTT                M ANALYST            7566 09-DEC-82      30000  
+                   20         40 MARKETING       BOSTON                         
+                                                                                
+      7839 KING                 M PRESIDENT               17-NOV-81      50000  
+                   10         40 MARKETING       BOSTON                         
+                                                                                
+      7844 TURNER               M SALESMAN           7698 08-SEP-81      15000  
+                   30         40 MARKETING       BOSTON                         
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7876 ADAMS                M CLERK              7788 12-JAN-83      11000  
+                   20         40 MARKETING       BOSTON                         
+                                                                                
+      7900 JAMES                M CLERK              7698 03-DEC-81      95000  
+                   30         40 MARKETING       BOSTON                         
+                                                                                
+      7902 FORD                 M ANALYST            7566 03-DEC-81      30000  
+                   20         40 MARKETING       BOSTON                         
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO    DEPT_NO D_NAME          LOCATION                       
+---------- ---------- ---------- --------------- ------------                   
+      7934 MILLER               F CLERK              7782 23-JAN-82      13000  
+                   10         40 MARKETING       BOSTON                         
+                                                                                
+
+64 rows selected.
+
+SQL> create a table Emp_income (Emp_no,E_Name,salary,Comm) from emp;
+create a table Emp_income (Emp_no,E_Name,salary,Comm) from emp
+       *
+ERROR at line 1:
+ORA-00901: invalid CREATE command 
+
+
+SQL> create table Emp_income (Emp_no,E_Name,salary,Comm) from emp;
+create table Emp_income (Emp_no,E_Name,salary,Comm) from emp
+                                                    *
+ERROR at line 1:
+ORA-00922: missing or invalid option 
+
+
+SQL> create table Emp_income (Emp_no,E_Name,salary,Comm) from emp;
+create table Emp_income (Emp_no,E_Name,salary,Comm) from emp
+                                                    *
+ERROR at line 1:
+ORA-00922: missing or invalid option 
+
+
+SQL> create table Emp_income (Emp_no,E_Name,salary,Comm) from emp;
+create table Emp_income (Emp_no,E_Name,salary,Comm) from emp
+                                                    *
+ERROR at line 1:
+ORA-00922: missing or invalid option 
+
+
+SQL> create table Emp_income(Emp_no,E_Name,salary,Comm) from emp;
+create table Emp_income(Emp_no,E_Name,salary,Comm) from emp
+                                                   *
+ERROR at line 1:
+ORA-00922: missing or invalid option 
+
+
+SQL> create table Emp_income(Emp_no,E_Name,salary,Comm from emp);
+create table Emp_income(Emp_no,E_Name,salary,Comm from emp)
+                                                  *
+ERROR at line 1:
+ORA-00902: invalid datatype 
+
+
+SQL> create table Emp_income as (Emp_no,E_Name,salary,Comm from emp);
+create table Emp_income as (Emp_no,E_Name,salary,Comm from emp)
+                            *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword 
+
+
+SQL> create table Emp_income as (Emp_NO,E_Name,salary,Comm from emp);
+create table Emp_income as (Emp_NO,E_Name,salary,Comm from emp)
+                            *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword 
+
+
+SQL> create table Emp_income as (EMP_NO,E_NAME,SALARY,COMM from emp);
+create table Emp_income as (EMP_NO,E_NAME,SALARY,COMM from emp)
+                            *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword 
+
+
+SQL> create table Emp_income as (select EMP_NO,E_NAME,SALARY,COMM from emp);
+
+Table created.
+
+SQL> select e_name from emp where E_name like '%d%';
+
+no rows selected
+
+SQL> select e_name from emp where E_name like %d%;
+select e_name from emp where E_name like %d%
+                                         *
+ERROR at line 1:
+ORA-00911: invalid character 
+
+
+SQL> select e_name from emp where E_name like '%D%';
+
+E_NAME                                                                          
+--------------------                                                            
+WARD                                                                            
+ADAMS                                                                           
+FORD                                                                            
+
+SQL> select e_name from emp where E_name like '%M%';
+
+E_NAME                                                                          
+--------------------                                                            
+SMITH                                                                           
+MARTIN                                                                          
+MARTIN                                                                          
+ADAMS                                                                           
+JAMES                                                                           
+MILLER                                                                          
+
+6 rows selected.
+
+SQL> select e_name from emp where E_name like '\100%' '%M%';
+select e_name from emp where E_name like '\100%' '%M%'
+                                                 *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select e_name from emp where E_name like 'M%';
+
+E_NAME                                                                          
+--------------------                                                            
+MARTIN                                                                          
+MARTIN                                                                          
+MILLER                                                                          
+
+SQL> select e_name from emp where E_name like '%er';
+
+no rows selected
+
+SQL> select e_name from emp where E_name like '%ER';
+
+E_NAME                                                                          
+--------------------                                                            
+TURNER                                                                          
+MILLER                                                                          
+
+SQL> select e_name from emp where E_name like '____';
+
+E_NAME                                                                          
+--------------------                                                            
+WARD                                                                            
+KING                                                                            
+FORD                                                                            
+
+SQL> select e_name from emp where E_name like '_____';
+
+E_NAME                                                                          
+--------------------                                                            
+SMITH                                                                           
+ALLEN                                                                           
+JONES                                                                           
+BLAKE                                                                           
+CLARK                                                                           
+CLARK                                                                           
+SCOTT                                                                           
+ADAMS                                                                           
+JAMES                                                                           
+
+9 rows selected.
+
+SQL> select e_name from emp where E_name like '______';
+
+E_NAME                                                                          
+--------------------                                                            
+MARTIN                                                                          
+MARTIN                                                                          
+TURNER                                                                          
+MILLER                                                                          
+
+SQL> select e_name from emp where E_name like '%R _';
+
+no rows selected
+
+SQL> select e_name from emp where E_name like '%R ___';
+
+no rows selected
+
+SQL> select e_name from emp where E_name like '%__R%';
+
+E_NAME                                                                          
+--------------------                                                            
+WARD                                                                            
+MARTIN                                                                          
+MARTIN                                                                          
+CLARK                                                                           
+CLARK                                                                           
+TURNER                                                                          
+FORD                                                                            
+MILLER                                                                          
+
+8 rows selected.
+
+SQL> select e_name from emp where E_name like '%__R';
+
+E_NAME                                                                          
+--------------------                                                            
+TURNER                                                                          
+MILLER                                                                          
+
+SQL> select e_name from emp where E_name like '__R%';
+
+E_NAME                                                                          
+--------------------                                                            
+WARD                                                                            
+MARTIN                                                                          
+MARTIN                                                                          
+TURNER                                                                          
+FORD                                                                            
+
+SQL> select e_name from emp order by e_name;
+
+E_NAME                                                                          
+--------------------                                                            
+ADAMS                                                                           
+ALLEN                                                                           
+BLAKE                                                                           
+CLARK                                                                           
+CLARK                                                                           
+FORD                                                                            
+JAMES                                                                           
+JONES                                                                           
+KING                                                                            
+MARTIN                                                                          
+MARTIN                                                                          
+
+E_NAME                                                                          
+--------------------                                                            
+MILLER                                                                          
+SCOTT                                                                           
+SMITH                                                                           
+TURNER                                                                          
+WARD                                                                            
+
+16 rows selected.
+
+SQL> select e_name , salary from emp salary asc;
+select e_name , salary from emp salary asc
+                                       *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select e_name , salary from emp salary ASC;
+select e_name , salary from emp salary ASC
+                                       *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select e_name , salary from emp  order by salary ASC;
+
+E_NAME                   SALARY                                                 
+-------------------- ----------                                                 
+SMITH                      8000                                                 
+ADAMS                     11000                                                 
+WARD                      12500                                                 
+MARTIN                    12500                                                 
+MARTIN                    12500                                                 
+MILLER                    13000                                                 
+TURNER                    15000                                                 
+ALLEN                     16000                                                 
+CLARK                     24500                                                 
+CLARK                     24500                                                 
+BLAKE                     28500                                                 
+
+E_NAME                   SALARY                                                 
+-------------------- ----------                                                 
+JONES                     29750                                                 
+FORD                      30000                                                 
+SCOTT                     30000                                                 
+KING                      50000                                                 
+JAMES                     95000                                                 
+
+16 rows selected.
+
+SQL> select e_name , salary from emp  order by salary DESC;
+
+E_NAME                   SALARY                                                 
+-------------------- ----------                                                 
+JAMES                     95000                                                 
+KING                      50000                                                 
+FORD                      30000                                                 
+SCOTT                     30000                                                 
+JONES                     29750                                                 
+BLAKE                     28500                                                 
+CLARK                     24500                                                 
+CLARK                     24500                                                 
+ALLEN                     16000                                                 
+TURNER                    15000                                                 
+MILLER                    13000                                                 
+
+E_NAME                   SALARY                                                 
+-------------------- ----------                                                 
+MARTIN                    12500                                                 
+WARD                      12500                                                 
+MARTIN                    12500                                                 
+ADAMS                     11000                                                 
+SMITH                      8000                                                 
+
+16 rows selected.
+
+SQL> select e_name , salary from emp  order by 1;
+
+E_NAME                   SALARY                                                 
+-------------------- ----------                                                 
+ADAMS                     11000                                                 
+ALLEN                     16000                                                 
+BLAKE                     28500                                                 
+CLARK                     24500                                                 
+CLARK                     24500                                                 
+FORD                      30000                                                 
+JAMES                     95000                                                 
+JONES                     29750                                                 
+KING                      50000                                                 
+MARTIN                    12500                                                 
+MARTIN                    12500                                                 
+
+E_NAME                   SALARY                                                 
+-------------------- ----------                                                 
+MILLER                    13000                                                 
+SCOTT                     30000                                                 
+SMITH                      8000                                                 
+TURNER                    15000                                                 
+WARD                      12500                                                 
+
+16 rows selected.
+
+SQL> select e_name , salary from emp  order by 2;
+
+E_NAME                   SALARY                                                 
+-------------------- ----------                                                 
+SMITH                      8000                                                 
+ADAMS                     11000                                                 
+WARD                      12500                                                 
+MARTIN                    12500                                                 
+MARTIN                    12500                                                 
+MILLER                    13000                                                 
+TURNER                    15000                                                 
+ALLEN                     16000                                                 
+CLARK                     24500                                                 
+CLARK                     24500                                                 
+BLAKE                     28500                                                 
+
+E_NAME                   SALARY                                                 
+-------------------- ----------                                                 
+JONES                     29750                                                 
+FORD                      30000                                                 
+SCOTT                     30000                                                 
+KING                      50000                                                 
+JAMES                     95000                                                 
+
+16 rows selected.
+
+SQL> select e_name  from emp where 5000< salary<95000 ;
+select e_name  from emp where 5000< salary<95000 
+                                          *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select e_name  from emp where salary between 5000 and 95000 ;
+
+E_NAME                                                                          
+--------------------                                                            
+SMITH                                                                           
+ALLEN                                                                           
+WARD                                                                            
+JONES                                                                           
+MARTIN                                                                          
+MARTIN                                                                          
+BLAKE                                                                           
+CLARK                                                                           
+CLARK                                                                           
+SCOTT                                                                           
+KING                                                                            
+
+E_NAME                                                                          
+--------------------                                                            
+TURNER                                                                          
+ADAMS                                                                           
+JAMES                                                                           
+FORD                                                                            
+MILLER                                                                          
+
+16 rows selected.
+
+SQL> select e_name  from emp where salary between <5000 and 95000 ;
+select e_name  from emp where salary between <5000 and 95000 
+                                             *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> select e_name  from emp where 5000>salary ;
+
+no rows selected
+
+SQL> select e_name  from emp where salary<5000 ;
+
+no rows selected
+
+SQL> select e_name  from emp where salary<50000 ;
+
+E_NAME                                                                          
+--------------------                                                            
+SMITH                                                                           
+ALLEN                                                                           
+WARD                                                                            
+JONES                                                                           
+MARTIN                                                                          
+MARTIN                                                                          
+BLAKE                                                                           
+CLARK                                                                           
+CLARK                                                                           
+SCOTT                                                                           
+TURNER                                                                          
+
+E_NAME                                                                          
+--------------------                                                            
+ADAMS                                                                           
+FORD                                                                            
+MILLER                                                                          
+
+14 rows selected.
+
+SQL> select e_name  from emp where salary>50000 ;
+
+E_NAME                                                                          
+--------------------                                                            
+JAMES                                                                           
+
+SQL> select e_name  from emp where comm=NULL;
+
+no rows selected
+
+SQL> desc emp;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMP_NO                                             NUMBER
+ E_NAME                                             VARCHAR2(20)
+ GENDER                                             CHAR(1)
+ JOB                                                VARCHAR2(12)
+ MGR                                                NUMBER
+ HIREDATE                                           DATE
+ SALARY                                             NUMBER
+ COMM                                               NUMBER
+ DEPT_NO                                            NUMBER
+
+SQL> desc emp;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMP_NO                                             NUMBER
+ E_NAME                                             VARCHAR2(20)
+ GENDER                                             CHAR(1)
+ JOB                                                VARCHAR2(12)
+ MGR                                                NUMBER
+ HIREDATE                                           DATE
+ SALARY                                             NUMBER
+ COMM                                               NUMBER
+ DEPT_NO                                            NUMBER
+
+SQL> select * from emp;
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7369 SMITH                M CLERK              7902 17-DEC-80       8000  
+                   20                                                           
+                                                                                
+      7499 ALLEN                F SALESMAN           7698 20-FEB-81      16000  
+      3000         30                                                           
+                                                                                
+      7521 WARD                 M SALESMAN           7698 22-FEB-81      12500  
+      5000         30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7566 JONES                F MANAGER            7839 02-APR-81      29750  
+                   20                                                           
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30                                                           
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7698 BLAKE                M MANAGER            7389 01-MAY-81      28500  
+                   30                                                           
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10                                                           
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7788 SCOTT                M ANALYST            7566 09-DEC-82      30000  
+                   20                                                           
+                                                                                
+      7839 KING                 M PRESIDENT               17-NOV-81      50000  
+                   10                                                           
+                                                                                
+      7844 TURNER               M SALESMAN           7698 08-SEP-81      15000  
+                   30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7876 ADAMS                M CLERK              7788 12-JAN-83      11000  
+                   20                                                           
+                                                                                
+      7900 JAMES                M CLERK              7698 03-DEC-81      95000  
+                   30                                                           
+                                                                                
+      7902 FORD                 M ANALYST            7566 03-DEC-81      30000  
+                   20                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7934 MILLER               F CLERK              7782 23-JAN-82      13000  
+                   10                                                           
+                                                                                
+
+16 rows selected.
+
+SQL> select e_name  from emp where comm is NULL;
+
+E_NAME                                                                          
+--------------------                                                            
+SMITH                                                                           
+JONES                                                                           
+BLAKE                                                                           
+CLARK                                                                           
+CLARK                                                                           
+SCOTT                                                                           
+KING                                                                            
+TURNER                                                                          
+ADAMS                                                                           
+JAMES                                                                           
+FORD                                                                            
+
+E_NAME                                                                          
+--------------------                                                            
+MILLER                                                                          
+
+12 rows selected.
+
+SQL> select e_name  from emp where comm is not  NULL;
+
+E_NAME                                                                          
+--------------------                                                            
+ALLEN                                                                           
+WARD                                                                            
+MARTIN                                                                          
+MARTIN                                                                          
+
+SQL> select avg (salary) from emp;
+
+AVG(SALARY)                                                                     
+-----------                                                                     
+  25796.875                                                                     
+
+SQL> select min (salary) from emp;
+
+MIN(SALARY)                                                                     
+-----------                                                                     
+       8000                                                                     
+
+SQL> select max (salary) from emp;
+
+MAX(SALARY)                                                                     
+-----------                                                                     
+      95000                                                                     
+
+SQL> select sum (salary) from emp;
+
+SUM(SALARY)                                                                     
+-----------                                                                     
+     412750                                                                     
+
+SQL> select count  (salary) from emp;
+
+COUNT(SALARY)                                                                   
+-------------                                                                   
+           16                                                                   
+
+SQL> select E_name ,sum (salary) from emp;
+select E_name ,sum (salary) from emp
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select E_name , sum (salary) from emp;
+select E_name , sum (salary) from emp
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select  sum (salary,E_name) from emp;
+select  sum (salary,E_name) from emp
+        *
+ERROR at line 1:
+ORA-00909: invalid number of arguments 
+
+
+SQL> select  sum (salary),E_Name from emp;
+select  sum (salary),E_Name from emp
+                     *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select avg (salary) from emp where job="CLERK";
+select avg (salary) from emp where job="CLERK"
+                                       *
+ERROR at line 1:
+ORA-00904: "CLERK": invalid identifier 
+
+
+SQL> select avg (salary) from emp where job='CLERK';
+
+AVG(SALARY)                                                                     
+-----------                                                                     
+      31750                                                                     
+
+SQL> select E_Name,avg(salary) from emp where job='CLERK';
+select E_Name,avg(salary) from emp where job='CLERK'
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select E_Name,avg(salary) as avgsalary from emp where job='CLERK';
+select E_Name,avg(salary) as avgsalary from emp where job='CLERK'
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select E_Name,avg(salary) as avg_salary from emp where job='CLERK';
+select E_Name,avg(salary) as avg_salary from emp where job='CLERK'
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select E_Name,avg(salary) as avg_salary from emp ;
+select E_Name,avg(salary) as avg_salary from emp 
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select * from emp;
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7369 SMITH                M CLERK              7902 17-DEC-80       8000  
+                   20                                                           
+                                                                                
+      7499 ALLEN                F SALESMAN           7698 20-FEB-81      16000  
+      3000         30                                                           
+                                                                                
+      7521 WARD                 M SALESMAN           7698 22-FEB-81      12500  
+      5000         30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7566 JONES                F MANAGER            7839 02-APR-81      29750  
+                   20                                                           
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30                                                           
+                                                                                
+      7654 MARTIN               M SALESMAN           7698 28-SEP-81      12500  
+     14000         30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7698 BLAKE                M MANAGER            7389 01-MAY-81      28500  
+                   30                                                           
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10                                                           
+                                                                                
+      7782 CLARK                M MANAGER            7839 09-JUN-81      24500  
+                   10                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7788 SCOTT                M ANALYST            7566 09-DEC-82      30000  
+                   20                                                           
+                                                                                
+      7839 KING                 M PRESIDENT               17-NOV-81      50000  
+                   10                                                           
+                                                                                
+      7844 TURNER               M SALESMAN           7698 08-SEP-81      15000  
+                   30                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7876 ADAMS                M CLERK              7788 12-JAN-83      11000  
+                   20                                                           
+                                                                                
+      7900 JAMES                M CLERK              7698 03-DEC-81      95000  
+                   30                                                           
+                                                                                
+      7902 FORD                 M ANALYST            7566 03-DEC-81      30000  
+                   20                                                           
+                                                                                
+
+    EMP_NO E_NAME               G JOB                 MGR HIREDATE      SALARY  
+---------- -------------------- - ------------ ---------- --------- ----------  
+      COMM    DEPT_NO                                                           
+---------- ----------                                                           
+      7934 MILLER               F CLERK              7782 23-JAN-82      13000  
+                   10                                                           
+                                                                                
+
+16 rows selected.
+
+SQL> select E_Name,avg(salary) as avg_salary from emp where job='CLERK';
+select E_Name,avg(salary) as avg_salary from emp where job='CLERK'
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select E_Name,avg(salary) as AvgSalary from emp where job='CLERK';
+select E_Name,avg(salary) as AvgSalary from emp where job='CLERK'
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select E_Name,Dept_NO ,avg(salary) as AvgSalary from emp group dept_no;
+select E_Name,Dept_NO ,avg(salary) as AvgSalary from emp group dept_no
+                                                               *
+ERROR at line 1:
+ORA-00924: missing BY keyword 
+
+
+SQL> select E_Name,Dept_NO ,avg(salary) as AvgSalary from emp group Dept_no;
+select E_Name,Dept_NO ,avg(salary) as AvgSalary from emp group Dept_no
+                                                               *
+ERROR at line 1:
+ORA-00924: missing BY keyword 
+
+
+SQL> select Dept_NO ,avg(salary) as AvgSalary from emp group Dept_no;
+select Dept_NO ,avg(salary) as AvgSalary from emp group Dept_no
+                                                        *
+ERROR at line 1:
+ORA-00924: missing BY keyword 
+
+
+SQL> select Dept_NO ,avg(salary) as AvgSalary from emp group by  Dept_no;
+
+   DEPT_NO  AVGSALARY                                                           
+---------- ----------                                                           
+        30 27428.5714                                                           
+        20      21750                                                           
+        10      28000                                                           
+
+SQL> select E_name , Dept_NO,avg(salary) as AvgSalary from emp group by  Dept_no;
+select E_name , Dept_NO,avg(salary) as AvgSalary from emp group by  Dept_no
+       *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> select E_name , Dept_NO,avg(salary) as AvgSalary from emp group by  Dept_no,E_NAMe;
+
+E_NAME                  DEPT_NO  AVGSALARY                                      
+-------------------- ---------- ----------                                      
+JONES                        20      29750                                      
+WARD                         30      12500                                      
+SCOTT                        20      30000                                      
+KING                         10      50000                                      
+JAMES                        30      95000                                      
+ALLEN                        30      16000                                      
+MARTIN                       30      12500                                      
+BLAKE                        30      28500                                      
+FORD                         20      30000                                      
+SMITH                        20       8000                                      
+ADAMS                        20      11000                                      
+
+E_NAME                  DEPT_NO  AVGSALARY                                      
+-------------------- ---------- ----------                                      
+MILLER                       10      13000                                      
+CLARK                        10      24500                                      
+TURNER                       30      15000                                      
+
+14 rows selected.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> spool off;
